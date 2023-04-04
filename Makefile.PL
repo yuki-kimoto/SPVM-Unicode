@@ -33,8 +33,11 @@ WriteMakefile(
     resources => {
       repository => {
         type => 'git',
-        url  => '',
-        web  => '',
+        url  => 'https://github.com/yuki-kimoto/SPVM-Unicode.git',
+        web  => 'https://github.com/yuki-kimoto/SPVM-Unicode',
+      },
+      bugtracker => {
+        web => 'https://github.com/yuki-kimoto/SPVM-Unicode/issues'
       },
     },
   },
