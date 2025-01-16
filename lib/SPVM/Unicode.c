@@ -17,6 +17,10 @@ int32_t SPVM__Unicode__uchar(SPVM_ENV* env, SPVM_VALUE* stack) {
   
   int32_t* offset_ref = stack[1].iref;
   
+  if (!offset_ref) {
+    return env->die(env, stack, "The reference of the offset $offset_ref must be defined.");
+  }
+  
   if (*offset_ref < 0 || *offset_ref > str_len - 1) {
     stack[0].ival = -1;
     return 0;
@@ -24,7 +28,7 @@ int32_t SPVM__Unicode__uchar(SPVM_ENV* env, SPVM_VALUE* stack) {
   
   SPVM__Unicode__utf8proc_int32_t dst;
   int32_t uchar_len = (int32_t)SPVM__Unicode__utf8proc_iterate((const SPVM__Unicode__utf8proc_uint8_t*)(str + *offset_ref), str_len, &dst);
-
+  
   int32_t uchar;
   if (uchar_len > 0) {
     uchar = dst;
