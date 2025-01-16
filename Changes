@@ -5,6 +5,8 @@
     * Change source file names not to conflict them.
   [Exception Changes]
     * Unicode#uchar method throws an exception if $offset_ref is not defined.
+  [New Features]
+    * Add version.
     
 0.05  2023-04-04
   [License Change]
