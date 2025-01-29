@@ -12,7 +12,7 @@ SPVM::Unicode - Unicode Utilities
 
 =head1 Description
 
-The Unicode class of L<SPVM> has methods for unicode utilities.
+Unicode class in L<SPVM> has methods for unicode utilities.
 
 =head1 Usage
 
