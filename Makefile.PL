@@ -110,6 +110,7 @@ WriteMakefile(
   },
   PREREQ_PM => {
     %configure_requires_and_prereq_pm,
+    'SPVM::Resource::Utf8proc' => '0.004',
   },
 );
 
